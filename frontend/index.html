@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Product Checker</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="app.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      color: #333;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      margin-right: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      margin-left: 10px;
+    }
+
+    button {
+      padding: 8px 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #result, #addResult {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔍 Fake Product Identification</h2>
+
+  <div class="section">
+    <input id="productId" type="text" placeholder="Enter Product ID">
+    <button onclick="checkProduct()">Check Product</button>
+    <p id="result"></p>
+  </div>
+
+  <hr>
+
+  <h3>🛠️ Add Product (Admin Only)</h3>
+
+  <div class="section">
+    <input id="newProductId" type="text" placeholder="Enter New Product ID">
+    <label>
+      <input type="checkbox" id="isAuthentic">
+      <span>Is Authentic</span>
+    </label>
+    <br><br>
+    <button onclick="addProduct()">Add Product</button>
+    <p id="addResult"></p>
+  </div>
+
+</body>
+</html>
